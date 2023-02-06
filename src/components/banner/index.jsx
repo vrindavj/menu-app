@@ -1,4 +1,4 @@
-import { Button, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {  useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
 import { BannerContainer,BannerButton, BannerContent, BannerDescription, BannerTitle,BannerImage, BannerHeader } from "../../styles/banner";
 
@@ -19,9 +19,11 @@ const Banner = () => {
         Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo
           tempor incididunt ut labore et dolore magna
         </BannerDescription>
-        <BannerButton color="secondary">View this week's menu</BannerButton>
+      <BannerButton color="primary">Shop Now</BannerButton>
 
       </BannerContent>
+
+
     </BannerContainer>
   );
 };
