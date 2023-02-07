@@ -19,7 +19,7 @@ const Banner = () => {
         Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo
           tempor incididunt ut labore et dolore magna
         </BannerDescription>
-      <BannerButton color="primary">Shop Now</BannerButton>
+      <BannerButton color="primary">View this week's menu</BannerButton>
 
       </BannerContent>
 

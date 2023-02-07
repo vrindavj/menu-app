@@ -4,7 +4,6 @@ import { Container, Typography } from "@mui/material";
 import Appbar from "./components/appbar";
 import { useEffect } from "react";
 import Banner from "./components/banner";
-import MenuCard from "./components/menucard";
 import { TextContainer } from "./styles/textContainer";
 import MenuCarousel from "./components/carousel/menuCarousel";
 import { ThemeProvider } from "@emotion/react";

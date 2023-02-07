@@ -2,8 +2,8 @@ import { createTheme } from "@mui/material";
 import { lighten } from "polished";
 
 export const Colors = {
-    primary: '#d32f12', //#ed482b', //"#D92102",
-    secondary: '#ef5d43', //"#f7c0ad",
+    primary: "#d32f12", //#ed482b', //"#D92102",
+    secondary: "#ef5d43", //"#f7c0ad",
     success: "#4CAF50",
     info: "#00a2ff",
     danger: "#FF5722",
@@ -26,37 +26,38 @@ export const Colors = {
     ///////////////
     white: "#fff",
     black: "#000",
-  };
+};
 
-  const theme = createTheme({
-  palette:{
-    primary:{
-        main:Colors.primary
-    },secondary:{
-        main:Colors.secondary
-    }
-  },
-  components:{
-    MuiButton:{
-        defaultProps:{
-            disableRipple:true,
-            disableElevation:true
-        }
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: Colors.primary,
+        },
+        secondary: {
+            main: Colors.secondary,
+        },
     },
-    BannerButton:{
-      styleOverrides:{
-        root:{ color: Colors.white}
-      },
-      primary:{
-        background:Colors.primary,
-        '&:hover':{ background: Colors.secondary}
-      },
-      secondary:{
-        background:Colors.secondary,
-        '&:hover':{ background:lighten(0.05,Colors.secondary)}
-      }
-    }
-  }
-  })
+    components: {
+        MuiButton: {
+            defaultProps: {
+                disableRipple: true,
+                disableElevation: true,
+            },
+        },
+        BannerBtn: {
+            styleOverrides: {
+                root: { color: Colors.white },
+                primary: {
+                    background: Colors.primary,
+                    "&:hover": { background: Colors.secondary },
+                },
+                secondary: {
+                    background: Colors.secondary,
+                    "&:hover": { background: lighten(0.05, Colors.secondary) },
+                },
+            },
+        },
+    },
+});
 
-  export default theme
+export default theme;

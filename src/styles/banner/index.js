@@ -67,16 +67,14 @@ export const BannerButton = styled(Button, {
     slot: 'Root',
     overridesResolver: (props, styles) => [
         styles.root,
-        props.color === 'primary' && styles.primary,
-        props.color === 'secondary' && styles.secondary
-    ]
+        props.color === "primary" && styles.primary,
+        props.color === "secondary" && styles.secondary
+    ],
 })(({ theme }) => ({
+    padding: "10px 0px",
     color: Colors.white,
-    backgroundColor: Colors.primary,
-    marginRight: 'auto',
-    marginLeft: 'auto',
-    paddingLeft: '1em',
-    paddingRight: '1em',
+    fontWeight: "bold",
+    fontSize: "16px",
     [theme.breakpoints.down("sm")]: {
         padding: "10px 0px",
         fontSize: "14px",
