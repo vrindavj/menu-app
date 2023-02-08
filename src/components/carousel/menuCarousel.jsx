@@ -11,11 +11,18 @@ import {
   Grid,
   Typography,
   Button,
-  useMediaQuery,Tooltip
+  useMediaQuery,
+  Tooltip,
 } from "@mui/material";
-import { CarouselContainer,CardPanel,ActionButton,ActionContainer } from "../../styles/menuCarousel";
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import {
+  CarouselContainer,
+  CardPanel,
+  ActionButton,
+  ActionContainer,
+} from "../../styles/menuCarousel";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import MenuCard from "../menucard";
 
 // const useStyles = makeStyles(theme=>({
 //   card: {
@@ -104,38 +111,24 @@ function MenuCarousel() {
     <div>
       <CarouselContainer className="containerClass">
         {getVisibleItems().map((item) => (
-          <CardPanel
-            key={item.id}
-          >
-            <Card
-              style={{
-                maxWidth: "345px",
-                margin: "0 auto",
-                textAlign: "center",
-              }}
-            >
-              <CardContent>
-                <Typography gutterBottom variant="h5">
-                  {item.name}
-                </Typography>
-                <Typography>{item.description}</Typography>
-                <Typography variant="subtitle1">{item.price}</Typography>
-              </CardContent>
-            </Card>
+          <CardPanel key={item.id}>
+            <MenuCard menuData={item}></MenuCard>
           </CardPanel>
         ))}
       </CarouselContainer>
       <ActionContainer>
-      <ActionButton disabled={disablePrevious} onClick={handlePrev}>
-      <Tooltip placement="left" title="share this product">
-          <ArrowBackIosIcon  color={disablePrevious ? 'disabled' : 'primary'}   />
-        </Tooltip>
-      </ActionButton>
-      <ActionButton disabled={disableNext} onClick={handleNext}>
-      <Tooltip placement="left" title="share this product">
-         <ArrowForwardIosIcon color={disableNext ? 'disabled' : 'primary'} />
-        </Tooltip>
-      </ActionButton>
+        <ActionButton disabled={disablePrevious} onClick={handlePrev}>
+          <Tooltip placement="left" title="share this product">
+            <ArrowBackIosIcon
+              color={disablePrevious ? "disabled" : "primary"}
+            />
+          </Tooltip>
+        </ActionButton>
+        <ActionButton disabled={disableNext} onClick={handleNext}>
+          <Tooltip placement="left" title="share this product">
+            <ArrowForwardIosIcon color={disableNext ? "disabled" : "primary"} />
+          </Tooltip>
+        </ActionButton>
       </ActionContainer>
       {/* <Button disabled={disablePrevious} onClick={handlePrev}>
         Previous

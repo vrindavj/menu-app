@@ -35,15 +35,11 @@ export const WrapperDiv = styled(Box)(({ matches, theme }) => ({
     height: "100%",
     padding: "0px 0px",
     background: Colors.white,
-    // [theme.breakpoints.down("sm")]: {
-    //     flexDirection: "column",
-    //     alignItems: "center",
-    // },
 }));
 
 export const CardPanel = styled(Box)(({ matches, theme }) => ({
-    maxWidth: "345px",
-    margin: "0 auto",
+    maxWidth: "400px",
+    // margin: "0 auto",
     textAlign: "center",
     // [theme.breakpoints.down("sm")]: {
     //     flexDirection: "column",
