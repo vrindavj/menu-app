@@ -2,7 +2,8 @@ import { colors, styled } from "@mui/material";
 import { Colors, DrawerWidth } from "../theme";
 import { Typography, Box, Button, IconButton } from "@mui/material";
 import "@fontsource/waterfall";
-import "@fontsource/water-brush"
+import "@fontsource/water-brush";
+
 // npm install polished to change the brightness of the colors used
 export const ActionContainer = styled(Box)(({ matches, theme }) => ({
     display: "flex",
@@ -14,14 +15,36 @@ export const ActionButton = styled(IconButton)(() => ({
     margin: 4,
 }));
 
-export const CarousalContainer = styled(Box)(({ matches, theme }) => ({
+export const CarouselContainer = styled(Box)(({ matches, theme }) => ({
     display: "flex",
-    // overflow: "hidden",
     justifyContent: "center",
     width: "100%",
     height: "100%",
     padding: "0px 0px",
     background: Colors.white,
+    // [theme.breakpoints.down("sm")]: {
+    //     flexDirection: "column",
+    //     alignItems: "center",
+    // },
+}));
+
+export const WrapperDiv = styled(Box)(({ matches, theme }) => ({
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
+    height: "100%",
+    padding: "0px 0px",
+    background: Colors.white,
+    // [theme.breakpoints.down("sm")]: {
+    //     flexDirection: "column",
+    //     alignItems: "center",
+    // },
+}));
+
+export const CardPanel = styled(Box)(({ matches, theme }) => ({
+    maxWidth: "345px",
+    margin: "0 auto",
+    textAlign: "center",
     // [theme.breakpoints.down("sm")]: {
     //     flexDirection: "column",
     //     alignItems: "center",
