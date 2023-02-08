@@ -52,7 +52,7 @@ const menuItems = [
   {
     id: 3,
     name: "Lasagna",
-    description: "Layers of pasta, meat sauce, mozzarella",
+    description: " Layers of pasta, meat sauce, mozzarella Layers of pasta, meat sauce, mozzarella Layers of pasta, meat sauce, mozzarella Layers of pasta, meat sauce, mozzarella",
     price: 16.99,
   },
   {

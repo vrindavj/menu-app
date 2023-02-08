@@ -1,6 +1,6 @@
-import { colors, styled } from "@mui/material";
-import { Colors, DrawerWidth } from "../theme";
-import { Typography, Box, Button, IconButton } from "@mui/material";
+import { styled } from "@mui/material";
+import { Colors } from "../theme";
+import { Box, IconButton } from "@mui/material";
 import "@fontsource/waterfall";
 import "@fontsource/water-brush";
 
@@ -41,8 +41,10 @@ export const CardPanel = styled(Box)(({ matches, theme }) => ({
     maxWidth: "400px",
     // margin: "0 auto",
     textAlign: "center",
-    // [theme.breakpoints.down("sm")]: {
-    //     flexDirection: "column",
-    //     alignItems: "center",
-    // },
+    display: "flex",
+    alignContent: "stretch"
+        // [theme.breakpoints.down("sm")]: {
+        //     flexDirection: "column",
+        //     alignItems: "center",
+        // },
 }));
