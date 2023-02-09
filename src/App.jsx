@@ -10,6 +10,10 @@ import { ThemeProvider } from "@emotion/react";
 import theme from "./styles/theme";
 import Booking from "./components/booking";
 import Footer from "./components/footer";
+import AppDrawer from "./components/drawer";
+import { UIProvider } from "./context/ui";
+import SearchBox from "./components/search";
+
 function App() {
   useEffect(() => {
     document.title = "Food Factori";
@@ -18,6 +22,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Container maxWidth="xl" sx={{ background: "#fff" }}>
         <div className="App">
+        <UIProvider>
           <Appbar> </Appbar>
           <Banner> </Banner>
           <TextContainer variant="h3">
@@ -28,6 +33,9 @@ function App() {
           <Booking >
           </Booking>
           <Footer  />
+          <AppDrawer />
+          <SearchBox></SearchBox>
+          </UIProvider>
         </div>
       </Container>{" "}
     </ThemeProvider>

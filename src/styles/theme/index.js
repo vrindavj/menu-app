@@ -1,6 +1,8 @@
 import { createTheme } from "@mui/material";
 import { lighten } from "polished";
 
+export const DrawerWidth = 250;
+
 export const Colors = {
     primary: "#d32f12", //#ed482b', //"#D92102",
     secondary: "#ef5d43", //"#f7c0ad",
@@ -37,12 +39,26 @@ const theme = createTheme({
         secondary: {
             main: Colors.secondary,
         },
+        white: {
+            main: Colors.white
+        }
     },
     components: {
         MuiButton: {
             defaultProps: {
                 disableRipple: true,
                 disableElevation: true,
+            },
+        },
+        MuiDrawer: {
+            styleOverrides: {
+                paper: {
+                    width: DrawerWidth,
+                    background: Colors.primary,
+                    color: Colors.white,
+                    borderRadius: "0px 100px 0px 0px",
+                    borderRight: `1px solid ${Colors.primary}`,
+                },
             },
         },
         BannerBtn: {
