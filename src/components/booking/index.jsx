@@ -5,7 +5,8 @@ import {
   BookingImage,
   BookingForm,
   BookingHeader,
-  StyledTextField,FormFieldGroup
+  StyledTextField,
+  FormFieldGroup,
 } from "../../styles/booking";
 import { TextField } from "@mui/material";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
@@ -22,7 +23,7 @@ const Booking = () => {
 
   return (
     <BookingContainer>
-      <BookingImage src="/images/banner/booking.jpg"></BookingImage>
+             <BookingImage src="/images/banner/booking.jpg"></BookingImage>
       <BookingContent>
         <BookingHeader>Make a reservation</BookingHeader>
         <BookingForm component="form" noValidate>
@@ -33,12 +34,11 @@ const Booking = () => {
                 id="outlined-required"
                 label="Name"
                 type="text"
-                defaultValue="Hello World"
               />
               <StyledTextField required id="contact" label="Contact Number" />
             </FormFieldGroup>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <div style={{ display: "flex", flexDirection: "row" }}>
+            <FormFieldGroup>
                 <StyledTextField
                   as={DesktopDatePicker}
                   label="Date desktop"
@@ -54,8 +54,16 @@ const Booking = () => {
                   onChange={handleChange}
                   renderInput={(params) => <TextField {...params} />}
                 />
-              </div>
+           </FormFieldGroup>
             </LocalizationProvider>
+            <FormFieldGroup>
+            <StyledTextField
+                required
+                id="outlined-required"
+                label="Guest number"
+                type="number"
+              />
+            </FormFieldGroup>
           </div>
         </BookingForm>
       </BookingContent>

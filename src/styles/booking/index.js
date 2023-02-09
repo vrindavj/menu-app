@@ -6,6 +6,7 @@ import "@fontsource/water-brush";
 import "@fontsource/sorts-mill-goudy";
 // npm install polished to change the brightness of the colors used
 export const BookingContainer = styled(Box)(({ matches, theme }) => ({
+    marginTop: "20px",
     display: "flex",
     overflow: "hidden",
     justifyContent: "center",
@@ -23,12 +24,17 @@ export const BookingContainer = styled(Box)(({ matches, theme }) => ({
 export const BookingImage = styled("img")(({ src, theme }) => ({
     src: `url(${src})`,
     width: "400px",
+    marginRight: '20px',
+
     [theme.breakpoints.down("md")]: {
         width: "300px",
+        marginRight: '0px'
     },
     [theme.breakpoints.down("sm")]: {
         width: "280px",
         height: "300px",
+        marginRight: '0px'
+
     },
 }));
 
@@ -40,12 +46,10 @@ export const BookingContent = styled(Box)(() => ({
     maxWidth: 420,
     padding: "30px",
     color: Colors.black,
-    // backgroundImage: `url(/images/banner/banner3blur.png)`,
-    // backgroundSize:'cover',
 
 }));
 
-export const BannerButton = styled(Button, {
+export const BookingFormButton = styled(Button, {
     shouldForwardProp: (prop) => prop !== 'color',
     name: 'BannerBtn',
     slot: 'Root',
@@ -82,13 +86,13 @@ export const BookingHeader = styled(Typography)(({ matches, theme }) => ({
 export const BookingForm = styled(Box)(({ comp, theme }) => ({
     component: comp,
 
-
 }));
 
 
 export const StyledTextField = styled(TextField)(({ comp, theme }) => ({
     width: '200px',
     marginBottom: '20px',
+    marginRight: '6px',
     [theme.breakpoints.down("md")]: {
         width: '300px',
 

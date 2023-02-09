@@ -24,11 +24,9 @@ function App() {
             Whats on my platter today ?{" "}
           </TextContainer>
           <MenuCarousel> </MenuCarousel>{" "}
-          <div style={{margin: "40px",}}>
-          <Booking>
+          <Booking sx={{ marginTop: "80px" }}>
           </Booking>
 
-          </div>
         </div>
       </Container>{" "}
     </ThemeProvider>
