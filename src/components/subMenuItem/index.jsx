@@ -1,9 +1,10 @@
 import React from "react";
 import { DietDiv, WrapperDiv } from "../../styles/subMenuItem";
-import { Button, Tooltip,Typography } from "@mui/material";
+import { Tooltip,Typography } from "@mui/material";
 import { ActionButton } from "../../styles/menuCarousel";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 const SubMenuItem = (props) => {
+  
   console.log(props, "inside menuitem");
   const dietInfo = props.itemData.Diets.join();
   const longtext =

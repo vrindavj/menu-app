@@ -1,4 +1,4 @@
-import { Button, IconButton, Slide, TextField } from "@mui/material";
+import {  IconButton, Slide, TextField } from "@mui/material";
 import { Box, styled } from "@mui/system";
 import { Colors } from "../../styles/theme";
 import SearchIcon from "@mui/icons-material/Search";

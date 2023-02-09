@@ -1,11 +1,17 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+### APP DESCRIPTION
+Website for viewing FoodFactori's menu - university student's restuarant (basic view similar to Reactori website) 
+Project for practicing MUI - using styled components
+### TO BE DONE LATER
+1. Add week's menu page - include routing
+2. Add customer review panel 
+3. Routing for navbar items
+##### Available Scripts  #####
 
 In the project directory, you can run:
-
+### `npm install`
+This will install all the dependencies needed for teh app -  primarily mui and font
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -28,6 +34,7 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
 
 
 Photo by <a href="https://unsplash.com/@jonathanborba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jonathan Borba</a> on <a href="https://unsplash.com/photos/4SykP9iXXsg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

@@ -1,6 +1,6 @@
-import { colors, styled } from "@mui/material";
-import { Colors, DrawerWidth } from "../theme";
-import { Typography, Box, Button, TextField } from "@mui/material";
+import { styled } from "@mui/material";
+import { Colors } from "../theme";
+import { Typography, Box, TextField } from "@mui/material";
 import "@fontsource/waterfall";
 import "@fontsource/water-brush";
 import "@fontsource/sorts-mill-goudy";
@@ -49,25 +49,6 @@ export const BookingContent = styled(Box)(() => ({
 
 }));
 
-export const BookingFormButton = styled(Button, {
-    shouldForwardProp: (prop) => prop !== 'color',
-    name: 'BannerBtn',
-    slot: 'Root',
-    overridesResolver: (props, styles) => [
-        styles.root,
-        props.color === "primary" && styles.primary,
-        props.color === "secondary" && styles.secondary
-    ],
-})(({ theme }) => ({
-    padding: "10px 0px",
-    color: Colors.white,
-    fontWeight: "bold",
-    fontSize: "16px",
-    [theme.breakpoints.down("sm")]: {
-        padding: "10px 0px",
-        fontSize: "14px",
-    },
-}));
 
 export const BookingHeader = styled(Typography)(({ matches, theme }) => ({
     lineHeight: 1,

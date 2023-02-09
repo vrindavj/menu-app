@@ -1,10 +1,6 @@
 import React from "react";
 import {
-  Card,
-  CardMedia,
-  CardActionArea,
   CardContent,CardActions,
-  Typography,
 } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import { CardWrapper,CardName,SubTitleText } from "../../styles/menuCard";
@@ -18,13 +14,11 @@ const MenuCard = (props) => {
   return (
     
     <CardWrapper className="wrapperCard">
-   
       <CardContent style={{ marginBottom: "auto" }}>
         <CardName >
           {props.menuData.Name}
         </CardName>
         <Divider color={Colors.secondary} sx={{ marginTop:'5px',marginBottom:'10px' }}  />
-
         {props.menuData.Meals.map((item) => (
           <SubMenuItem key={item.RecipeId} itemData={item}></SubMenuItem>
         ))}
@@ -32,8 +26,6 @@ const MenuCard = (props) => {
       <CardActions disableSpacing sx={{ justifyContent:'center'}}>
       <SubTitleText sx={{ marginTop:'15px'}}  variant="subtitle1">{props.menuData.Price}</SubTitleText>
       </CardActions>
-      
-
     </CardWrapper>
   );
 };

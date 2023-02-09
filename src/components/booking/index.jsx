@@ -6,14 +6,14 @@ import {
   BookingForm,
   BookingHeader,
   StyledTextField,
-  FormFieldGroup,BookingFormButton
+  FormFieldGroup
 } from "../../styles/booking";
 import { TextField } from "@mui/material";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import { BannerButton } from "../../styles/banner";
 
 const Booking = () => {
