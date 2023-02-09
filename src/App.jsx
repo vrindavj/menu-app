@@ -9,6 +9,7 @@ import MenuCarousel from "./components/carousel";
 import { ThemeProvider } from "@emotion/react";
 import theme from "./styles/theme";
 import Booking from "./components/booking";
+import Footer from "./components/footer";
 function App() {
   useEffect(() => {
     document.title = "Food Factori";
@@ -24,9 +25,9 @@ function App() {
             Whats on my platter today ?{" "}
           </TextContainer>
           <MenuCarousel> </MenuCarousel>{" "}
-          <Booking sx={{ marginTop: "80px" }}>
+          <Booking >
           </Booking>
-
+          <Footer  />
         </div>
       </Container>{" "}
     </ThemeProvider>

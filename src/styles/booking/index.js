@@ -4,7 +4,7 @@ import { Typography, Box, Button, TextField } from "@mui/material";
 import "@fontsource/waterfall";
 import "@fontsource/water-brush";
 import "@fontsource/sorts-mill-goudy";
-// npm install polished to change the brightness of the colors used
+
 export const BookingContainer = styled(Box)(({ matches, theme }) => ({
     marginTop: "20px",
     display: "flex",
@@ -13,7 +13,8 @@ export const BookingContainer = styled(Box)(({ matches, theme }) => ({
     width: "100%",
     height: "100%",
     padding: "0px 0px",
-    background: Colors.white,
+    background: Colors.bgLight,
+    borderRadius: '6px',
     [theme.breakpoints.down("sm")]: {
         flexDirection: "column",
         alignItems: "center",
@@ -24,16 +25,15 @@ export const BookingContainer = styled(Box)(({ matches, theme }) => ({
 export const BookingImage = styled("img")(({ src, theme }) => ({
     src: `url(${src})`,
     width: "400px",
-    marginRight: '20px',
+    margin: '30px',
 
     [theme.breakpoints.down("md")]: {
         width: "300px",
-        marginRight: '0px'
+        margin: '20px 20px'
     },
     [theme.breakpoints.down("sm")]: {
         width: "280px",
-        height: "300px",
-        marginRight: '0px'
+        margin: '20px 20px'
 
     },
 }));

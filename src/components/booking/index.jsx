@@ -6,7 +6,7 @@ import {
   BookingForm,
   BookingHeader,
   StyledTextField,
-  FormFieldGroup,
+  FormFieldGroup,BookingFormButton
 } from "../../styles/booking";
 import { TextField } from "@mui/material";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
@@ -14,6 +14,7 @@ import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs, { Dayjs } from "dayjs";
+import { BannerButton } from "../../styles/banner";
 
 const Booking = () => {
   const [value, setValue] = React.useState(dayjs("2014-08-18T21:11:54"));
@@ -22,6 +23,8 @@ const Booking = () => {
   };
 
   return (
+  <div style={{marginTop: "40px",}}>
+
     <BookingContainer>
              <BookingImage src="/images/banner/booking.jpg"></BookingImage>
       <BookingContent>
@@ -65,9 +68,13 @@ const Booking = () => {
               />
             </FormFieldGroup>
           </div>
+
         </BookingForm>
+        <BannerButton color="primary">Reserve</BannerButton>
+
       </BookingContent>
     </BookingContainer>
+    </div>
   );
 };
 
