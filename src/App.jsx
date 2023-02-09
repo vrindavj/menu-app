@@ -5,10 +5,10 @@ import Appbar from "./components/appbar";
 import { useEffect } from "react";
 import Banner from "./components/banner";
 import { TextContainer } from "./styles/textContainer";
-import MenuCarousel from "./components/carousel/menuCarousel";
+import MenuCarousel from "./components/carousel";
 import { ThemeProvider } from "@emotion/react";
 import theme from "./styles/theme";
-
+import Booking from "./components/booking";
 function App() {
   useEffect(() => {
     document.title = "Food Factori";
@@ -24,6 +24,11 @@ function App() {
             Whats on my platter today ?{" "}
           </TextContainer>
           <MenuCarousel> </MenuCarousel>{" "}
+          <div style={{margin: "40px",}}>
+          <Booking>
+          </Booking>
+
+          </div>
         </div>
       </Container>{" "}
     </ThemeProvider>

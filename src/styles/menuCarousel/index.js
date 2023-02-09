@@ -38,7 +38,7 @@ export const WrapperDiv = styled(Box)(({ matches, theme }) => ({
 }));
 
 export const CardPanel = styled(Box)(({ matches, theme }) => ({
-    maxWidth: "400px",
+    minWidth: "340px",
     // margin: "0 auto",
     textAlign: "center",
     display: "flex",

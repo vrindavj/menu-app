@@ -1,19 +1,6 @@
 import React, { useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-// import Carousel from '@material-ui/lab/Carousel';
 import { menuData } from "../../MenuData";
-// import { makeStyles } from '@mui/system';
-import {
-  Card,
-  CardContent,
-  Grid,
-  Typography,
-  Button,
-  useMediaQuery,
-  Tooltip,
-} from "@mui/material";
+import { useMediaQuery,Tooltip} from "@mui/material";
 import {
   CarouselContainer,
   CardPanel,
@@ -24,50 +11,41 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import MenuCard from "../menucard";
 
-// const useStyles = makeStyles(theme=>({
-//   card: {
-//     maxWidth: 345,
-//     margin: '0 auto',
-//     textAlign: 'center',
-//     [theme.breakpoints.up('sm')]: {
-//       width: '45%',
-//       margin: '0 2%'
-//     }
-//   }
-// }));
 
-const menuItems = [
-  {
-    id: 1,
-    name: "Pizza Margherita",
-    description: "Tomato sauce, mozzarella, basil",
-    price: 12.99,
-  },
-  {
-    id: 2,
-    name: "Spaghetti Bolognese",
-    description: "Ground beef, tomato sauce, herbs",
-    price: 14.99,
-  },
-  {
-    id: 3,
-    name: "Lasagna",
-    description: " Layers of pasta, meat sauce, mozzarella Layers of pasta, meat sauce, mozzarella Layers of pasta, meat sauce, mozzarella Layers of pasta, meat sauce, mozzarella",
-    price: 16.99,
-  },
-  {
-    id: 4,
-    name: "4Spaghetti Bolognese",
-    description: "Ground beef, tomato sauce, herbs",
-    price: 14.99,
-  },
-  {
-    id: 5,
-    name: "5Lasagna",
-    description: "Layers of pasta, meat sauce, mozzarella",
-    price: 16.99,
-  },
-];
+
+const menuItems = menuData.LunchMenus[0].SetMenus ;
+// [
+//   {
+//     id: 1,
+//     name: "Pizza Margherita",
+//     description: "Tomato sauce, mozzarella, basil",
+//     price: 12.99,
+//   },
+//   {
+//     id: 2,
+//     name: "Spaghetti Bolognese",
+//     description: "Ground beef, tomato sauce, herbs",
+//     price: 14.99,
+//   },
+//   {
+//     id: 3,
+//     name: "Lasagna",
+//     description: " Layers of pasta, meat sauce, mozzarella Layers of pasta, meat sauce, mozzarella Layers of pasta, meat sauce, mozzarella Layers of pasta, meat sauce, mozzarella",
+//     price: 16.99,
+//   },
+//   {
+//     id: 4,
+//     name: "4Spaghetti Bolognese",
+//     description: "Ground beef, tomato sauce, herbs",
+//     price: 14.99,
+//   },
+//   {
+//     id: 5,
+//     name: "5Lasagna",
+//     description: "Layers of pasta, meat sauce, mozzarella",
+//     price: 16.99,
+//   },
+// ];
 
 function MenuCarousel() {
   const [index, setIndex] = useState(0);
@@ -108,10 +86,10 @@ function MenuCarousel() {
   };
 
   return (
-    <div>
+  <div style={{marginTop: "40px",}}>
       <CarouselContainer className="containerClass">
-        {getVisibleItems().map((item) => (
-          <CardPanel key={item.id}>
+        {getVisibleItems().map((item,index) => (
+          <CardPanel key={index}>
             <MenuCard menuData={item}></MenuCard>
           </CardPanel>
         ))}
@@ -130,12 +108,6 @@ function MenuCarousel() {
           </Tooltip>
         </ActionButton>
       </ActionContainer>
-      {/* <Button disabled={disablePrevious} onClick={handlePrev}>
-        Previous
-      </Button>
-      <Button disabled={disableNext} onClick={handleNext}>
-        Next
-      </Button> */}
     </div>
   );
 }

@@ -1,11 +1,12 @@
-
 import { Typography } from "@mui/material";
-import {styled} from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import "@fontsource/montez";
 
 
-export const TextContainer = styled(Typography)(({variant,matches,theme}) => ({
+export const TextContainer = styled(Typography)(({ variant, matches, theme }) => ({
     padding: "4px",
-    variant:variant
-    
-  }));
+    variant: variant,
+    [theme.breakpoints.down("sm")]: {
+        fontSize: '35px'
+    },
+}));

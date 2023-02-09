@@ -48,13 +48,13 @@ export const menuData = {
                         },
                         {
                             Name: "Tomaatti-jogurttikastike",
-                            RecipeId: 19070,
+                            RecipeId: 19079,
                             Diets: ["*", "M", "G", "L"],
                             Nutrients: null,
                         },
                         {
                             Name: "Täysjyväriisi",
-                            RecipeId: 19070,
+                            RecipeId: 192370,
                             Diets: ["*", "A", "G", "L", "Veg", "M"],
                             Nutrients: null,
                         },
